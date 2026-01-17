@@ -9,7 +9,7 @@ Static website for [Open-SSPM](https://github.com/open-sspm/open-sspm).
    npm install
    ```
 
-2. Build CSS:
+2. Build site:
    ```bash
    npm run build
    ```
@@ -21,4 +21,9 @@ Static website for [Open-SSPM](https://github.com/open-sspm/open-sspm).
 
 ## Deployment
 
-This website is designed to be deployed to GitHub Pages. Simply push the contents to the `main` branch or configure GitHub Actions to deploy.
+### Cloudflare Pages
+
+- Build command: `npm run build`
+- Build output directory: `site`
+
+If you want to deploy via Wrangler (e.g., from CI), set `CLOUDFLARE_API_TOKEN` and run `npm run deploy`.

@@ -4,9 +4,10 @@
   "description": "Open-SSPM Website",
   "private": true,
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/app.css --minify",
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/app.css --minify",
+    "build": "npm run build:css && node scripts/prepare-site.mjs",
     "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/app.css --watch",
-    "deploy": "wrangler pages deploy ./dist"
+    "deploy": "wrangler pages deploy ./site"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
